@@ -30,6 +30,8 @@ vex-url=http://osm.conveyal.com/vex
 seamless-census-bucket=lodes-data-2014
 seamless-census-region=us-east-1
 
+static-site-bucket=test
+
 # When offline is true, authentication and other services are not used.
 # This is only partially true - regional results will still be saved on S3.
 offline=true

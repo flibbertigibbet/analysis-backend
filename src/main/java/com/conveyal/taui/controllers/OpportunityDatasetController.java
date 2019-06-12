@@ -1,5 +1,6 @@
 package com.conveyal.taui.controllers;
 
+import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.S3Object;
@@ -55,6 +56,7 @@ public class OpportunityDatasetController {
 
     private static final AmazonS3 s3 = AmazonS3ClientBuilder.standard()
             .withRegion(AnalysisServerConfig.awsRegion)
+            .withCredentials(new ProfileCredentialsProvider())
             .build();
 
     private static final String BUCKET = AnalysisServerConfig.gridBucket;

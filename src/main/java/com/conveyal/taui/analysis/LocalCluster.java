@@ -43,6 +43,7 @@ public abstract class LocalCluster {
         workerConfig.setProperty("cache-dir", AnalysisServerConfig.localCacheDirectory);
         workerConfig.setProperty("pointsets-bucket", AnalysisServerConfig.gridBucket);
         workerConfig.setProperty("aws-region", AnalysisServerConfig.awsRegion);
+        workerConfig.setProperty("static-site-bucket", AnalysisServerConfig.staticSiteBucket);
 
         // From a throughput perspective there is no point in running more than one worker locally, since each worker
         // has at least as many threads as there are processor cores. But for testing purposes (e.g. testing that task

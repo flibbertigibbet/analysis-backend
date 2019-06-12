@@ -51,6 +51,7 @@ public abstract class AnalysisServerConfig {
     public static final String seamlessCensusRegion = getProperty("seamless-census-region", true);
     public static final String gridBucket = getProperty("grid-bucket", true);
     public static final String resultsBucket = getProperty("results-bucket", true);
+    public static final String staticSiteBucket = getProperty("static-site-bucket", true);
     public static final String awsRegion = getProperty("aws-region", true);
     public static final String workerLogGroup = getProperty("worker-log-group", true);
     public static final int lightThreads = Integer.parseInt(getProperty("light-threads", true));
@@ -80,7 +81,7 @@ public abstract class AnalysisServerConfig {
     }
 
     static {
-        if (!offline && (bundleBucket == null || auth0ClientId == null || auth0Secret == null || gridBucket == null || resultsBucket == null || workerLogGroup == null)) {
+        if (!offline && (bundleBucket == null || auth0ClientId == null || auth0Secret == null || gridBucket == null || resultsBucket == null || workerLogGroup == null || staticSiteBucket == null)) {
             LOG.error("Application is missing config variables needed in online mode.");
         }
         if (workerInstanceType == InstanceType.UNKNOWN_TO_SDK_VERSION) {

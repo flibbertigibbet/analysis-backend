@@ -30,6 +30,8 @@ vex-url=http://example.com/vex
 seamless-census-bucket=test
 seamless-census-region=us-east-1
 
+static-site-bucket=test
+
 # When offline is true, authentication and other services are not used.
 # This is only partially true - regional results will still be saved on S3.
 # This is intended for local testing.
