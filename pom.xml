@@ -153,7 +153,7 @@
         <dependency>
             <groupId>com.github.flibbertigibbet</groupId>
             <artifactId>r5</artifactId>
-            <version>v4.5.4-static</version>
+            <version>v4.5.4-static-2</version>
         </dependency>
 
         <dependency>
